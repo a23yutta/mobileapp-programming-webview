@@ -1,5 +1,7 @@
 package com.example.webviewapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -16,11 +18,14 @@ public class MainActivity extends AppCompatActivity {
     private WebView myWebView;
 
     public void showExternalWebPage(){
-        // TODO: Add your code for showing external web page here
+        //myWebView.loadUrl("https://www.his.se/");
+        Intent showExternalWebPage = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.his.se/"));
+        //Intent showExternalWebPage = new Intent(Intent.ACTION_VIEW, Uri.parse("file:///android_asset/webview.html"));
+        startActivity(showExternalWebPage);
     }
 
     public void showInternalWebPage(){
-        // TODO: Add your code for showing internal web page here
+        myWebView.loadUrl("https://www.his.se/");
     }
 
     @Override
@@ -32,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
         myWebView = findViewById(R.id.my_webview);
         myWebView.setWebViewClient(new WebViewClient());
-        myWebView.loadUrl("https://www.his.se/");
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
@@ -78,11 +82,13 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_external_web) {
+            showExternalWebPage();
             Log.d("==>","Will display external web page");
             return true;
         }
 
         if (id == R.id.action_internal_web) {
+            showInternalWebPage();
             Log.d("==>","Will display internal web page");
             return true;
         }
