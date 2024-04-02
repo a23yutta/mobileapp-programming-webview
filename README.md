@@ -1,7 +1,7 @@
 
 # Rapport
 Bytt namn på appen till "MySparklingWebView" (strings.xml), möjliggjort att appen har tillgång 
-till internet (AndoridManifest.xml) och har ersättit "TextView" med en WebView element med ID = my_webview (activity_main.xml.
+till internet (AndoridManifest.xml) och har ersättit "TextView" med en WebView element med ID = my_webview (activity_main.xml).
 
 I filen "MainActivity.java" har det skapats en privat variabel "myWebView" av typen WebView och har även möjligjort att WebView elementet i appen får tillgång till
 den interna och externa webbsidan "https://www.his.se/".
