@@ -1,5 +1,4 @@
 package com.example.webviewapp;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,20 +11,14 @@ import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 public class MainActivity extends AppCompatActivity {
-
     private WebView myWebView;
 
     public void showExternalWebPage(){
-        //myWebView.loadUrl("https://www.his.se/");
-        Intent showExternalWebPage = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.his.se/"));
-        //Intent showExternalWebPage = new Intent(Intent.ACTION_VIEW, Uri.parse("file:///android_asset/webview.html"));
-        startActivity(showExternalWebPage);
-    }
-
-    public void showInternalWebPage(){
         myWebView.loadUrl("https://www.his.se/");
+    }
+    public void showInternalWebPage(){
+        myWebView.loadUrl("file:///android_asset/webview.html");
     }
 
     @Override

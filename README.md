@@ -25,7 +25,7 @@ Koden nedanför möjliggör att webbsidan går att exekveras i appen.
 }
 ```
 Skärmbild på den interna webbsian:
-![](android.png)
+![](ScreenshotInternal.png)
 Skärmbild på den externa webbsian:
-![](android.png)
+![](ScreenshotExternal.png)
 
